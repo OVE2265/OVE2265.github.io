@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/25/first-blog/">first blog</a>
+      <a class="article-title" href="/2017/10/25/first-blog/">http知识及常见状态码</a>
     </h1>
   
 
@@ -83,12 +83,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>陪她去哦们我贝尔佛打扫房间欧维阿斯蒂芬就爱饿哦清道夫破解没给我而过个人非法过去安慰工人房二个人头狗个人股</p>
+        <p>ARP协议<br>ARP是一种用以解析地址的协议,根据通信方的IP地址就可以反查出对应的MAC地址</p>
+<p>HTTP是无状态协议,使用HTTP协议,每当有新的请求发送时,就会有对应的新响应产生.协议本身并不保留之前一切的请求或响应报文的信息.而对于购物网站这样的情况,网站为了能够掌握是谁送出的请求,需要保存用户的状态,这时需要用到Cookie.</p>
+<p>应用http协议时,必定是一端担任客户端角色,另一端担任服务端角色.<br>http协议规定,请求从客户端发出,最后服务端响应该请求并返回.换句话说,肯定是先从客户端开始建立通信的,服务端在没有接收到请求之前不会发送响应.</p>
+<p>在HTTP/1.1中,所有的连接默认都是持久连接.<br>持久连接使得多数请求以管线化方式发送成为可能.即不用等待响应就可以发送下一个请求.</p>
+<p>首部字段Host会告知服务器,请求的资源所处的互联网主机名和端口号.Host首部字段在HTTP/1.1规范内饰唯一一个必须被包含在请求内的首部字段.<br>首部字段Host和以单台服务器分配多个域名的虚拟主机的工作机制有很密切的关联,这是首部字段Host必须存在的意义.<br>请求被发送至服务器时,请求中的主机名会用IP地址直接替换解决.但如果这时,相同的IP地址下部署运行着多个域名,那么服务器就会无法理解究竟是哪个域名对应的请求.因此,就需要使用首部字段Host来明确指出请求的主机域名.若服务器未设定主机名,那直接发送一个空值即可.Host:</p>
+<h2 id="告知服务器意图的HTTP方法"><a href="#告知服务器意图的HTTP方法" class="headerlink" title="告知服务器意图的HTTP方法"></a>告知服务器意图的HTTP方法</h2><ul>
+<li><strong>GET:</strong> 获取资源</li>
+<li><strong>POST:</strong> 传输实体主体</li>
+<li><strong>PUT:</strong> 传输文件<br>(就像FTP协议的文件上传一样,要求在请求报文的主体中包含文件内容,然后保存到请求URI指定的位置.但是,鉴于HTTP/1.1的PUT方法自身不带验证机制,任何人都可以上传文件,存在安全性问题,因此一般的Web网站不使用该方法.若配合Web应用程序的验证机制,或架设设计采用REST标准的同类网站,就可能会开放使用PUT方法.)</li>
+<li><strong>HEAD:</strong> 获得报文首部<br>(HEAD方法和GET方法一样,只是不返回报文主体部分.用于确认URI的有效性及资源更新的日期时间等)</li>
+<li><strong>DELETE:</strong> 删除文件<br>(DELETE方法和PUT方法相反,用于删除文件, 同样的,HTTP/1.1不带验证机制,所以一般的Web网站也不使用DELETE方法)</li>
+<li><strong>OPTIONS:</strong> 询问支持的方法<br>(OPTIONS方法用来查询针对请求URI指定的资源支持的方法)</li>
+<li><strong>TRACE:</strong> TRACE方法是让Web服务器端将之前的请求通信环回给客户端的方法</li>
+<li><strong>CONNECT:</strong> 要求用隧道协议连接代理</li>
+</ul>
+<h1 id="1-HTTP常见状态码"><a href="#1-HTTP常见状态码" class="headerlink" title="1 . HTTP常见状态码"></a>1 . HTTP常见状态码</h1><ul>
+<li>100-199 用于指定客户端应相应的某些动作。   </li>
+<li>200-299 用于表示请求成功。   </li>
+<li>300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。   </li>
+<li>400-499 用于指出客户端的错误。   </li>
+<li>500-599 用于支持服务器错误。  </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">HttpServletResponse中的常量代表关联不同标准消息的状态码。</div><div class="line">在servlet程序中，你会更多地用到这些常量的标识来使用状态码。</div><div class="line">例如：你一般会使用response.setStatus(response.SC_NO_CONTENT)</div><div class="line">而不是 response.setStatus(204)，因为后者不易理解而且容易导致错误。</div><div class="line">但是，你应当注意到服务器允许对消息轻微的改变，而客户端只注意状态码的数字值。</div><div class="line">所以服务器可能只返回 HTTP/1.1 200 而不是 HTTP/1.1 200 OK。</div><div class="line"></div><div class="line">- 100 (Continue/继续)</div><div class="line">- 101 (Switching Protocols/转换协议)</div><div class="line"></div><div class="line">- 200 (OK/正常)</div><div class="line">- 201 (Created/已创建)</div><div class="line">- 202 (Accepted/接受)</div><div class="line">- 203 (Non-Authoritative Information/非官方信息)</div><div class="line">- 204 (No Content/无内容)</div><div class="line">- 205 (Reset Content/重置内容)</div><div class="line">- 206 (Partial Content/局部内容)</div><div class="line"></div><div class="line">- 300 (Multiple Choices/多重选择)</div><div class="line">- 301 (Moved Permanently)</div><div class="line">- 302 (Found/找到)</div><div class="line">- 303 (See Other/参见其他信息)</div><div class="line">- 304 (Not Modified/未修正)</div><div class="line">- 305 (Use Proxy/使用代理)</div><div class="line">- 307 (Temporary Redirect/临时重定向)</div><div class="line"></div><div class="line">- 400 (Bad Request/错误请求)</div><div class="line">- 401 (Unauthorized/未授权)</div><div class="line">- 403 (Forbidden/禁止)</div><div class="line">- 404 (Not Found/未找到)</div><div class="line">- 405 (Method Not Allowed/方法未允许)</div><div class="line">- 406 (Not Acceptable/无法访问)</div><div class="line">- 407 (Proxy Authentication Required/代理服务器认证要求)</div><div class="line">- 408 (Request Timeout/请求超时)</div><div class="line">- 409 (Conflict/冲突)</div><div class="line">- 410 (Gone/已经不存在)</div><div class="line">- 411 (Length Required/需要数据长度)</div><div class="line">- 412 (Precondition Failed/先决条件错误)</div><div class="line">- 413 (Request Entity Too Large/请求实体过大)</div><div class="line">- 414 (Request URI Too Long/请求URI过长)</div><div class="line">- 415 (Unsupported Media Type/不支持的媒体格式)</div><div class="line">- 416 (Requested Range Not Satisfiable/请求范围无法满足)</div><div class="line">- 417 (Expectation Failed/期望失败)</div><div class="line"></div><div class="line">- 500 (Internal Server Error/内部服务器错误)</div><div class="line">- 501 (Not Implemented/未实现)</div><div class="line">- 502 (Bad Gateway/错误的网关)</div><div class="line">- 503 (Service Unavailable/服务无法获得)</div><div class="line">- 504 (Gateway Timeout/网关超时)</div><div class="line">- 505 (HTTP Version Not Supported/不支持的 HTTP 版本)</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/25/first-blog/" data-id="cj981bsi800009xwyqktn0ybd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/25/first-blog/" data-id="cj981jn900001c0wydqzixcb6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +155,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/24/hello-world/" data-id="cj981bsic00019xwy769dk91y" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/24/hello-world/" data-id="cj981jn8l0000c0wylrdeondu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -173,7 +195,7 @@
       <ul>
         
           <li>
-            <a href="/2017/10/25/first-blog/">first blog</a>
+            <a href="/2017/10/25/first-blog/">http知识及常见状态码</a>
           </li>
         
           <li>
